@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #213555;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Form Styles */
+#postForm {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#postForm input,
+#postForm textarea {
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#postForm button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#postForm button:hover {
+  background: #0056b3;
+}
+
+/* Posts Grid */
+#posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+/* Individual Post */
+#posts .post {
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#posts .post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#posts .post h2 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+#posts .post p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #555555;
+}
+
+/* Inside of post when click edit */
+#posts .post h2 input {
+  width: calc(98% - 20px);
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#posts .post p textarea {
+  width: calc(100% - 5px);
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow-y: auto;
+  resize: none;
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Post Buttons */
+#posts .post button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+}
+
+#posts .post button.edit-btn {
+  background: #ffc107;
+  color: white;
+}
+
+#posts .post button.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+#posts .post button:hover {
+  opacity: 0.8;
+}
